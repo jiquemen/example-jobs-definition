@@ -14,6 +14,21 @@
         "daysToKeep": 10,
         "numToKeep": 5
       } 
+    },
+    {
+      "jobName": "jenkins-pipline",
+      "jobDescription": "This is a Demo job multibranch",
+      "view": "CI/CD",
+      "pipelineScriptPath": "Jenkinsfile",
+      "git": {
+        "repositoryId": "jenkins-pipelines",
+        "repositoryUrl": "https://github.com/jiquemen/jenkins-pipelines.git",
+        "credentialsId": "GitHubxxx"
+      },
+      "logRotator": {
+        "daysToKeep": 10,
+        "numToKeep": 5
+      } 
     }
   ],
   "pipelineJobs": [
