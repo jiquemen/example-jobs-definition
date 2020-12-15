@@ -1,7 +1,7 @@
 {
   "multiBranchJobs": [
     {
-      "jobName": "DemoMultibranchJob",
+      "jobName": "DemoMultibranchJob-2020",
       "jobDescription": "This is a Demo job multibranch",
       "view": "DAPGQ-Demo",
       "pipelineScriptPath": "Jenkinsfile",
@@ -16,7 +16,7 @@
       } 
     },
     {
-      "jobName": "jenkins-pipline",
+      "jobName": "jenkins-pipline-2020",
       "jobDescription": "This is a Demo job multibranch",
       "view": "CI/CD",
       "pipelineScriptPath": "Jenkinsfile",
@@ -33,7 +33,7 @@
   ],
   "pipelineJobs": [
     {
-      "jobName": "myPipelineJob",
+      "jobName": "myPipelineJob-2020",
       "jobDescription": "This is a test job",
       "pipelineScriptPath": "Jenkinsfile.groovy",
       "cronTrigger": "2 H * * *",
