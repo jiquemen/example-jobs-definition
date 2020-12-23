@@ -1,42 +1,55 @@
 {
   "multiBranchJobs": [
     {
-      "jobName": "DemoMultibranchJob-2020",
-      "jobDescription": "This is a Demo job multibranch",
-      "view": "DAPGQ-Demo",
+      "jobName": "firstMultiBranchJob",
+      "jobDescription": "First job",
+      "view": "mainView",
       "pipelineScriptPath": "Jenkinsfile",
       "git": {
-        "repositoryId": "DAPGQ-Demo",
-        "repositoryUrl": "https://github.com/bdb-dns/DAPGQ-Demo.git",
-        "credentialsId": "GitHub"
+        "repositoryId": "firstMultiBranchJob",
+        "repositoryUrl": "https://github.com/myProjects/firstMultiBranchJob.git",
+        "repositoryTrigger": "* * * * *",
+        "credentialsId": "myGitCredentialsId"
       },
       "logRotator": {
-        "daysToKeep": 10,
-        "numToKeep": 5
-      } 
+        "daysToKeep": null,
+        "numToKeep": null
+      }
     },
     {
-      "jobName": "jenkins-pipline-2020",
-      "jobDescription": "This is a Demo job multibranch",
-      "view": "CI/CD",
+      "jobName": "secondMultiBranchJob",
+      "jobDescription": "Second job",
       "pipelineScriptPath": "Jenkinsfile",
       "git": {
-        "repositoryId": "jenkins-pipelines",
-        "repositoryUrl": "https://github.com/jiquemen/jenkins-pipelines.git",
-        "credentialsId": "GitHubxxx"
+        "repositoryId": "secondMultiBranchJob",
+        "repositoryUrl": "https://github.com/myProjects/secondMultiBranchJob.git",
+        "repositoryTrigger": "* * * * *",
+        "credentialsId": "myGitCredentialsId"
       },
       "logRotator": {
-        "daysToKeep": 10,
-        "numToKeep": 5
-      } 
+        "daysToKeep": 15,
+        "numToKeep": 10
+      }
+    },
+    {
+      "jobName": "thirdMultiBranchJob",
+      "jobDescription": "Third job",
+      "pipelineScriptPath": "Jenkinsfile",
+      "git": {
+        "repositoryId": "thirdMultiBranchJob",
+        "repositoryUrl": "https://github.com/myProjects/thirdMultiBranchJob.git",
+        "repositoryTrigger": "* * * * *",
+        "credentialsId": "myGitCredentialsId"
+      }
     }
   ],
   "pipelineJobs": [
     {
-      "jobName": "myPipelineJob-2020",
+      "jobName": "myPipelineJob",
       "jobDescription": "This is a test job",
       "pipelineScriptPath": "Jenkinsfile.groovy",
       "cronTrigger": "2 H * * *",
+      "view": "pipelineView",
       "remoteTriggerUuid": "618f1dae-9475-41c3-9d17-381ff3c8684e",
       "remoteBranchName": "master",
       "git": {
@@ -46,9 +59,9 @@
         "credentialsId": "myGitCredentialsId"
       },
       "logRotator": {
-        "daysToKeep": 10,
-        "numToKeep": 5
-      } 
+        "daysToKeep": 15,
+        "numToKeep": 10
+      }
     }
   ]
 }
